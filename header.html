@@ -1,0 +1,85 @@
+<script>
+    $(document).ready(function() {
+            var timer;
+            $("#sub_menu").mouseenter(function(){      //#slide에 mouseenter이벤트를 만듬
+                    timer = setTimeout(function() {       //딜레이를 설정하면서 (0.1초) 해당 시간 후에 아래와 같은 동작을 함 
+                    $("#slide_menu").not(':animated')        //에니메이션이 Queue에 쌓이는 것을 방지하기 위해서  not(':animated')설정을 해준다.
+                    .slideDown(500)                //css수정
+                    }, 100);           
+            })
+            $("#sub_menu").mouseleave(function(){       //#menu에 mouseleave이벤트를 만듬
+                    clearTimeout(timer);               //위에서 딜레이를 설정하고 그 시간 안에 mouseleave 이벤트가 일어나면 해당 timer변수가 사라져서
+                    $("#slide_menu")                        //mouseenter이벤트 시의 동작이 일어나지 않음
+                    .slideUp(500)              //css수정
+            });
+        });
+</script>
+
+<div id="top_head">      <!--60% 화면 너비에서 hidden-->
+    <div>
+        <a href=""><p>HOME</p></a>
+        <a href="https://www.ep.go.kr/CmsWeb/viewPage.req?idx=PG0000001180"><p>은평구청</p></a>
+        <a href="https://www.instagram.com/eunpyeong_museum/"><img src="image/mark_insta.png"></a>
+        <a href="https://blog.naver.com/epmuseum"><img src="image/mark_blog.png"></a>
+        <a href="https://www.youtube.com/channel/UCEHVypZCJCxGMNI1e1SWcTw?view_as=subscriber"><img src="image/mark_youtube.png"></a>
+    </div>
+</div>
+
+<div id="main_head">
+    <div id="logo_img"><a href="index.html"><img src="image/logo.gif"></a></div>
+    <div id="sub_menu" class="sub_menu_class">     <!--60% 화면 너비에서 hidden, 메뉴 버튼 활성화-->
+        <ul>
+            <li><a href="sub_intro.html">박물관소개</a></li>
+            <li><a href="sub_exhibit_info.html">이용안내</a></li>
+            <li><a href="">전시안내</a></li>
+            <li><a href="">교육안내</a></li>
+            <li><a href="">유물안내</a></li>
+            <li><a href="">박물관소식</a></li>
+            <li><a href="sub_center.html">한韓문화체험시설</a></li>
+        </ul>
+        <div id="slide_menu" class="slide_menu_class">
+            <div id="slide_menu_cover">
+                <ul>   <!--박물관소개-->
+                    <li><a href="sub_intro.html">인사말</a></li>
+                    <li><a href="sub_museum.html">박물관 소개</a></li>
+                    <li><a href="">박물관 연혁</a></li>
+                    <li><a href="">조직 및 업무</a></li>
+                </ul>
+                <ul>   <!--이용안내-->
+                    <li><a href="sub_exhibit_info.html">관람 안내</a></li>
+                    <li><a href="">시설 안내</a></li>
+                    <li><a href="">편의 시설</a></li>
+                    <li><a href="">오시는 길</a></li>
+                </ul>
+                <ul>   <!--전시안내-->
+                    <li><a href="">상설 전시</a></li>
+                    <li><a href="">특별 전시</a></li>
+                    <li><a href="">온라인 전시</a></li>
+                </ul>
+                <ul>   <!--교육안내-->
+                    <li><a href="">교육 안내</a></li>
+                    <li><a href="">교육 신청</a></li>
+                    <li><a href="">온라인 영상</a></li>
+                </ul>
+                <ul>   <!--유물안내-->
+                    <li><a href="">소장품 검색</a></li>
+                    <li><a href="">소장품 소개</a></li>
+                    <li><a href="">유물 기증</a></li>
+                </ul>
+                <ul>   <!--박물관소식-->
+                    <li><a href="">공지사항</a></li>
+                    <li><a href="">언론보도</a></li>
+                    <li><a href="">박물관 간행물</a></li>
+                </ul>
+                <ul>   <!--한韓문화체험시설-->
+                    <li><a href="sub_center.html">너나들이 센터</a></li>
+                    <li><a href="">셋이서 문학관</a></li>
+                    <li><a href="">삼각산금암미술관</a></li>
+                    <li><a href="">전시 안내</a></li>
+                    <li><a href="">교육 안내</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="mini_menu"><a href=""><img src="image/mark_menu.png"></a></div>
+</div>

@@ -1,0 +1,99 @@
+@media (max-width: 768px){ /*모바일*/
+    #sub_wrap{
+        padding-bottom: 500px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    #sub_wrap{
+        padding-bottom: 350px;
+    }
+}
+
+@media (max-width: 1024px) { /*타블렛*/
+    #sub_article{
+        width: 99.9%;    
+    }
+    #left_menu{
+        display: none;
+    }
+}
+
+@media (min-width: 1024px){ /*PC*/
+    #sub_article{
+        width: 79.9%;
+    }
+    #sub_wrap{
+        padding-bottom: 350px;
+    }
+    #left_menu{
+        display: block;
+    }
+}
+
+
+/*Left Menu*/
+#left_menu{
+    width: 20%;
+    height: 100%;
+    float: left;
+
+}
+#left_menu #left_menu_title{
+    width: 100%;
+    padding: 8% 0;
+    text-align: center;
+    border-bottom: 1px solid rgb(220, 220, 220);
+    border-top: 1px solid rgb(220, 220, 220);
+    background-color: rgb(245, 245, 245);
+}
+#left_menu #left_menu_title h2{
+    color: #333;
+}
+#left_menu #left_menu_items{
+    width: 100%;
+}
+#left_menu #left_menu_items ul{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    float: left;
+}
+#left_menu #left_menu_items ul li{
+    padding-left: 20%;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+#left_menu #left_menu_items ul li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95em;
+}
+#left_menu #left_menu_items ul li a:hover{
+    color: rgb(194, 135, 80);
+}
+
+/*Sub Article Common*/
+#sub_article{
+    float: right;
+    height: 100%;
+    border-top: 1px solid rgb(220, 220, 220);
+    border-left: 1px solid rgb(220, 220, 220);
+}
+#sub_article #sub_wrap{
+    float: right;
+    width: 95%;
+    margin-left: 5%;
+    padding-top: 2%;
+}
+#sub_article #article_title{
+    color: #333;
+}
+#sub_article #article_pos{
+    font-size: 0.8em;
+    color: #555;
+    margin-bottom: 6%;
+}
+#sub_article p{
+    line-height: 160%;
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관람안내 | 은평역사한옥박물관</title>
+
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/sub_common.css">
+
+    <!-- JQuery 삽입 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript">   
+        $(document).ready( function() {
+        
+        $("header").load("./header.html");
+        $("footer").load("./footer.html");
+        
+        });
+    </script>
+    
+    <style>
+        @media (max-width: 768px){ /*모바일*/
+            #special_table_phone{
+                display: block;
+            }
+            #special_table_pc{
+                display: none;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px){
+            #special_table_phone{
+                display: none;
+            }
+            #special_table_pc{
+                display: block;
+            }
+        }
+
+        @media (max-width: 1024px) { /*타블렛*/
+
+        }
+
+        @media (min-width: 1024px){ /*PC*/
+            #special_table_phone{
+                display: none;
+            }
+        }
+
+        #sub_article article{
+            width: 95%;
+            padding-right: 5%;
+            margin-bottom: 7%;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        table td{
+            border: 1px solid rgb(224, 224, 224);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        table img{
+            width: 4em;
+        }
+        .grey_table{
+            border-top: 6px solid rgb(119, 92, 77);
+            background-color: rgb(252, 252, 252);
+        }
+        .grey_table p{
+            font-size: 0.8em;
+            font-weight: 600;
+            color: #777;
+        }
+        #time_table #time_table_2 img{
+            margin-top: 5%;
+        }
+        #exhibit_article3 table img{
+            margin-top: 5%;
+        }
+        table #spc_t_pc_3 img{
+            margin-top: 3%;
+        }
+        table #spc_t_pc_4 img{
+            margin-top: -2%;
+        }
+        table #spc_t_pc_6 img{
+            margin-top: -2%;
+        }
+
+        #fee_table thead{
+            border-top: 3px solid rgb(119, 92, 77);
+            background-color: rgb(252, 252, 252);
+            font-weight: bolder;
+            height: 1.2em;
+        }
+        #fee_table tbody tr td:first-child{
+            font-weight: bolder;
+        }
+        #fee_table td{
+            height: 50px;
+        }
+        .article_title img{
+            width: 15px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+
+        </header>
+        <aside id="left_menu"> 
+            <div id="left_menu_title"><h2>이용안내</h2></div>
+            <div id="left_menu_items">
+                <ul>
+                    <li><a href="sub_exhibit_info.html"><h3>관람안내</h3></a></li>
+                    <li><a href="sub_watch_info.html"><h3>전시해설</h3></a></li>
+                    <li><a href=""><h3>시설안내</h3></a></li>
+                    <li><a href=""><h3>편의시설</h3></a></li>
+                    <li><a href=""><h3>오시는 길</h3></a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <section id="sub_article">
+            <div id="sub_wrap">
+                <h2 id="article_title">관람안내</h2>
+                <p id="article_pos">Main>이용안내><span>관람안내</span></p>
+                
+                <article id="exhibit_article1">
+                    <h3 class="article_title"><img src="image/list_icon.png">이용시간</h3>
+                    <table id="time_table" class="grey_table">
+                        <tr>
+                            <td id="time_table_1">
+                                <img src="image/Information/info_time1.png">
+                                <h4>관람시간</h4>
+                                <p>오전 9시 ~ 오후 6시(입장 마감 5시)</p>
+                            </td>
+                            <td id="time_table_2">
+                                <img src="image/Information/info_time2.png">
+                                <h4>휴관</h4>
+                                <p>매주 월요일, 1월 1일, 설날·추석 연휴<br>
+                                    ※ 월요일이 공휴일인 경우 화요일 휴관
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+
+                <article id="exhibit_article2">
+                    <h3 class="article_title"><img src="image/list_icon.png">관람요금</h3>
+                    <table id="fee_table">
+                        <thead>
+                            <tr>
+                                <td rowspan="2">대상</td>
+                                <td colspan="2">금액</td>
+                            </tr>
+                            <tr>
+                                <td>개인</td>
+                                <td>단체 (20인 이상)</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>일반</td>
+                                <td>1,000원</td>
+                                <td>700원</td>
+                            </tr>
+                            <tr>
+                                <td>초·중·고·군인</td>
+                                <td>500원</td>
+                                <td>300원</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>※ <span>예술인패스</span> 소지자 30% 할인</h4>
+                </article>
+
+                <article id="exhibit_article3">
+                    <h3 class="article_title"><img src="image/list_icon.png">면제대상</h3>
+                    <table id="special_table_pc" class="grey_table">
+                        <tr>
+                            <td id="spc_t_pc_1">
+                                <img src="image/Information/info_special1.png">
+                                <h4>미취학 아동(만 6세 이하)</h4>
+                                <p>증빙서류</p>
+                            </td>
+                            <td  id="spc_t_pc_2">
+                                <img src="image/Information/info_special2.png">
+                                <h4>경로우대(만 65세 이상)</h4>
+                                <p>신분증</p>
+                            </td>
+                            <td  id="spc_t_pc_3">
+                                <img src="image/Information/info_special3.png">
+                                <h4>국가유공자</h4>
+                                <p>국가유공자증, 유족증, 가족관계증명서</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  id="spc_t_pc_4">
+                                <img src="image/Information/info_special4.png">
+                                <h4>독립유공자·의사상자</h4>
+                                <p>독립유공자증, 유족증, 가족관계증명서</p>
+                            </td>
+                            <td  id="spc_t_pc_5">
+                                <img src="image/Information/info_special5.png">
+                                <h4>장애인과 보호자*</h4>
+                                <p>장애인증명서, 복지카드<br>
+                                    * 1~3급 장애인의 보호자 1인
+                                </p>
+                            </td>
+                            <td  id="spc_t_pc_6">
+                                <img src="image/Information/info_special6.png">
+                                <h4>국가기초생활수급자</h4>
+                                <p>수급자증명서, 신분증</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table id="special_table_phone" class="grey_table">
+                        <tr>
+                            <td  id="spc_t_ph_1">
+                                <img src="image/Information/info_special1.png">
+                                <h4>미취학 아동(만 6세 이하)</h4>
+                                <p>증빙서류</p>
+                            </td>
+                            <td  id="spc_t_ph_2">
+                                <img src="image/Information/info_special2.png">
+                                <h4>경로우대(만 65세 이상)</h4>
+                                <p>신분증</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  id="spc_t_ph_3">
+                                <img src="image/Information/info_special3.png">
+                                <h4>국가유공자</h4>
+                                <p>국가유공자증, 유족증, 가족관계증명서</p>
+                            </td>
+                            <td  id="spc_t_ph_4">
+                                <img src="image/Information/info_special4.png">
+                                <h4>독립유공자·의사상자</h4>
+                                <p>독립유공자증, 유족증, 가족관계증명서</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  id="spc_t_ph_5">
+                                <img src="image/Information/info_special5.png">
+                                <h4>장애인과 보호자*</h4>
+                                <p>장애인증명서, 복지카드<br>
+                                    * 1~3급 장애인의 보호자 1인
+                                </p>
+                            </td>
+                            <td  id="spc_t_ph_6">
+                                <img src="image/Information/info_special6.png">
+                                <h4>국가기초생활수급자</h4>
+                                <p>수급자증명서, 신분증</p>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <h4>※ 매달 마지막 수요일 <span>문화가 있는 날</span> 무료</h4>
+                </article>
+            </div>
+        </section>
+        <footer  id="foot">
+
+        </footer>
+    </div>
+</body>
+</html>

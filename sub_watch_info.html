@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전시해설 | 은평역사한옥박물관</title>
+
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/sub_common.css">
+
+    <!-- JQuery 삽입 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript">   
+        $(document).ready( function() {
+        
+        $("header").load("./header.html");
+        $("footer").load("./footer.html");
+        
+        });
+    </script>
+    
+    <style>
+        @media (max-width: 768px){ /*모바일*/
+
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px){
+
+        }
+
+        @media (max-width: 1024px) { /*타블렛*/
+
+        }
+
+        @media (min-width: 1024px){ /*PC*/
+
+        }
+
+        #sub_article article{
+            width: 95%;
+            padding-right: 5%;
+            margin-bottom: 7%;
+        }
+        article h3 span{
+            font-size: 0.9em;
+            color: rgb(209, 3, 3);
+        }
+        table{
+            border-top: 3px solid rgb(92, 12, 12);
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        table td{
+            border: 1px solid rgb(224, 224, 224);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        table td{
+            font-size: 0.85em;
+        }
+        table tr td:first-child{
+            font-weight: bolder;
+        }
+        #explain_sign_table td{
+            height: 60px;
+        }
+        #explain_how_table td{
+            height: 45px;
+        }
+        .article_title img{
+            width: 15px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+
+        </header>
+        <aside id="left_menu"> 
+            <div id="left_menu_title"><h2>이용안내</h2></div>
+            <div id="left_menu_items">
+                <ul>
+                    <li><a href="sub_exhibit_info.html"><h3>관람안내</h3></a></li>
+                    <li><a href="sub_watch_info.html"><h3>전시해설</h3></a></li>
+                    <li><a href=""><h3>시설안내</h3></a></li>
+                    <li><a href=""><h3>편의시설</h3></a></li>
+                    <li><a href=""><h3>오시는 길</h3></a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <section id="sub_article">
+            <div id="sub_wrap">
+                <h2 id="article_title">전시해설</h2>
+                <p id="article_pos">Main>이용안내><span>전시해설</span></p>
+                
+                <article>
+                    <h3 class="article_title"><img src="image/list_icon.png">전시해설 신청 <span>* 현재 코로나 확산 방지를 위하여 전시 해설을 운영하고 있지 않습니다.</span></h3>
+                    <table id="explain_sign_table">
+                        <tr>
+                            <td>대 상</td>
+                            <td>10명~20명 단체<br>
+                                초등학생 이상부터 해설 가능합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>신청 방법</td>
+                            <td>관람 3일 전까지 전화로 상담 및 신청<br>
+                                (☎02-351-8523~4)</td>
+                        </tr>
+                        <tr>
+                            <td>기타</td>
+                            <td>쾌적한 관람 환경 조성을 위해<br>
+                                전시해설의 1회 참가인원은 20명 내외로 제한하고 있습니다.</td>
+                        </tr>
+                    </table>
+                </article>
+                <article>
+                    <h3 class="article_title"><img src="image/list_icon.png">전시해설 음성안내기 이용</h3>
+                    <table id="explain_how_table">
+                        <tr>
+                            <td>대여대상</td>
+                            <td>외국인, 시각장애인</td>
+                        </tr>
+                        <tr>
+                            <td>대여방법</td>
+                            <td>2층 안내데스크에 신분증을 맡긴 후 음성안내기 대여 (무료)</td>
+                        </tr>
+                        <tr>
+                            <td>제공언어</td>
+                            <td>한국어 / 영어</td>
+                        </tr>
+                        <tr>
+                            <td>해설전시</td>
+                            <td>상설전시실 (2·3층)/td>
+                        </tr>
+                    </table>
+                </article>
+            </div>
+        </section>
+        <footer  id="foot">
+
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+@media (max-width: 768px){ /*모바일*/
+
+ }
+
+ @media (min-width: 768px) and (max-width: 1024px){
+
+ }
+
+@media (max-width: 1024px) { /*타블렛*/
+    header #top_head{
+        display: none;
+    }
+    #main_head #sub_menu{  /*헤더_main head_sub menu*/
+        display: none;
+    }
+    #main_head #logo_img{
+        float: left;
+        margin-bottom: 3%;
+    }
+    #main_head #mini_menu{
+        display: block;
+    }
+    #main_head #slide_menu{
+        display: none;
+    }
+}
+
+@media (min-width: 1024px){ /*PC*/
+    #main_head #logo_img{
+        width: 25%;
+        float: left;
+        margin-right: 40px;
+        position: absolute;
+        top: 3%;
+        margin-bottom: 0;
+    }
+    #main_head #logo_img img{
+        width: 100%;
+     }
+    #main_head #mini_menu{
+        display: none;
+    }
+}
+
+
+
+
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#wrap{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header{         /*헤더 초기화*/
+    width: 100%;
+}
+header div{
+    z-index: 5;
+}
+
+
+/*헤더_top head*/
+
+#top_head {     
+    width: 100%;
+    padding: 1% 0%;
+}
+#top_head div{
+    width: 25%;
+    float: right;
+}
+#top_head a{
+    float: left;
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+    margin-left: 6px;
+}
+#top_head a:hover{
+    color: rgb(194, 135, 80);
+}
+#top_head a p{
+    font-size: 0.9em;
+    
+}
+#top_head a:nth-child(2){
+    margin-right: 15px;
+}
+
+/*헤더_main head*/
+#main_head {        
+    float: left;
+    width: 100%;
+    position: relative;
+}
+#main_head #sub_menu{  /*헤더_main head_sub menu*/
+    width: 100%;
+    float: left;
+    padding-bottom: 1%;
+}
+#main_head #sub_menu>ul{
+    width: 70%;
+    list-style: none;
+    float: right;
+}
+#main_head #sub_menu>ul li{
+    width: 14%;
+    float: left;
+    font-size: 1.1em;
+}
+#main_head #sub_menu>ul li a{
+    width: 100%;
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+    font-weight: bolder;
+}
+#main_head #sub_menu>ul li a:hover{
+    color: rgb(194, 135, 80);
+}
+
+/*헤더_main head_slide menu*/
+.slide_menu_class{
+    border-top: 1px solid #ccc;
+    background-color: white;
+    display: none;   
+
+    position: absolute;
+    top: 90%;
+}
+.slide_menu_class a{
+    font-weight: bolder;
+} 
+/*
+.sub_menu_class:hover .slide_menu_class{
+    display: block;
+}
+.slide_menu_class:hover{
+    display: block;
+}
+*/
+#main_head #mini_menu{
+    float: right;
+}
+
+
+header #slide_menu{
+    width: 100%;
+}
+header #slide_menu #slide_menu_cover{
+    width: 70%;
+    float: right;
+}
+header #slide_menu ul{
+    padding-top: 2%;
+    float: left;
+    list-style: none;
+    width: 8.5%;
+
+    text-align: center;
+}
+header #slide_menu ul li{
+    width: 130%;
+
+    margin-bottom: 3%;
+}
+header #slide_menu ul li a{
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+    font-size: 0.9em;
+}
+header #slide_menu ul li a:hover{
+    color: rgb(194, 135, 80);
+}
+
+/*footer*/
+footer{
+    width: 100%;
+    height: 300px;
+    position: fixed;
+    bottom:0;
+    background-color: rgb(29, 29, 29);
+    display: none;
+}
+footer div{
+    padding-top: 5%;
+    float: left;
+    width: 40%;
+}
+footer div:first-child img{
+    float: left;
+}
+
+footer div ul{
+    list-style: none;
+}
+footer div ul li h5{
+    font-weight: 500;
+}
+footer div:last-child{
+    float: right;
+    width: 20%;
+}
+footer div a{
+    text-decoration: none;
+}
+footer div h4, footer div h5{
+    color: rgb(209, 209, 209);
+}
+footer div:first-child h4, footer div:first-child h5{
+    color: rgb(128, 128, 128);
+}
+footer select{
+    width: 200px;
+    padding: 0.8em 0.5em;
+    border: 1px solid #999;
+    font-family: inherit;
+
+    border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

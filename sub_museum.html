@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박물관 소개 | 은평역사한옥박물관</title>
+
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/sub_common.css">
+
+    <!-- JQuery 삽입 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript">   
+        $(document).ready( function() {
+        
+        $("header").load("./header.html");
+        $("footer").load("./footer.html");
+        
+        });
+    </script>
+    
+    <style>
+        @media (max-width: 768px){ /*모바일*/
+            #sub_article #mus_article1>div{
+                width: 95%;
+            }
+            #sub_article #mus_article2 img{
+                width: 95%;
+            }
+            #sub_article #mus_article2 div{
+                width: 100%;
+            }
+            #sub_article #mus_article1 p{
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px){
+            #sub_article #mus_article1>div{
+                width: 45%;
+            }
+            #sub_article #mus_article2 img{
+                width: 45%;
+            }
+            #sub_article #mus_article2 div{
+                width: 50%;
+            }
+            #sub_article #mus_article1 p{
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 1024px) { /*타블렛*/
+        }
+
+        @media (min-width: 1024px){ /*PC*/
+            #sub_article #mus_article1>div{
+                width: 45%;
+            }
+            #sub_article #mus_article2 img{
+                width: 45%;
+            }
+            #sub_article #mus_article2 div{
+                width: 50%;
+            }
+            #sub_article #mus_article1 p{
+                width: 50%;
+            }
+        }
+
+        /*Sub Article 박물관소개*/
+        #sub_article article{
+            width: 100%;
+            float: left;
+        }
+        #sub_article #mus_article1{
+            margin-bottom: 10%;
+        }
+        #sub_article #mus_article1 p{
+            font-size: 0.85em;
+            float: left;
+
+            font-weight: 500;
+            color:#333;
+        }
+        #sub_article #mus_article1>div{ /*모바일일 때에는 95% 설정*/
+            padding-left: 5%;
+            float: right;
+        }
+        #sub_article #mus_article1>div img{
+            width: 100%;
+        }
+        #sub_article #mus_article1>div div{
+            width: 100%;
+        }
+        #sub_article #mus_article1>div div img{
+            width: 45%;
+            margin-top: 5%;
+            margin-right: 2.5%;
+        }
+        #sub_article #mus_article2 img{
+            padding-right: 5%;
+            float: left;
+        }
+        #sub_article #mus_article2 div{
+            float: right;
+        }
+        #sub_article #mus_article2 div p{
+            width: 100%;
+            font-size: 0.8em;
+            font-weight: 500;
+            color:#333;
+        }
+
+        #sub_article #mus_article2 div div{
+            padding-top: 3%;
+            float: left;
+            width: 100%;
+        }
+        /*button*/
+        #sub_article #mus_article2 div div button{
+            padding-right: 5%;
+            width: 40%;
+            height: 40px;
+            border: 1px solid rgb(235, 235, 235);
+            background-color: rgb(255, 255, 255);
+            box-shadow: -2px -10px 10px 0px rgb(238, 238, 238) inset;
+            font-weight: bolder;
+            font-size: 1.01em;
+            color: #333;
+            text-align: center;
+        }
+        #sub_article #mus_article2 div div button:last-child{
+            margin-left: 5px;
+            color: rgb(122, 42, 42);
+        }
+        #mus_article1 h3{
+            color: rgb(209, 174, 148);
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+
+        </header>
+
+        <aside id="left_menu"> 
+            <div id="left_menu_title"><h2>박물관소개</h2></div>
+            <div id="left_menu_items">
+                <ul>
+                    <li><a href="sub_intro.html"><h3>인사말</h3></a></li>
+                    <li><a href="sub_museum.html"><h3>박물관 소개</h3></a></li>
+                    <li><a href=""><h3>박물관 연혁</h3></a></li>
+                    <li><a href=""><h3>조직 및 업무</h3></a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <section id="sub_article">
+            <div id="sub_wrap">
+                <h2 id="article_title">박물관 소개</h2>
+                <p id="article_pos">Main>박물관소개><span>박물관소개</span></p>
+    
+                <article id="mus_article1">
+                    <h3>은평시민들이 가까이에 두고 즐겨 찾는 머묾의 장소</h3>
+                    <h3>은평은 역사와 문화, 한옥의 미래가 머무르는 공간</h3>
+                    
+                    <div>
+                        <img src="image/Introduction/museum_info_bg.gif" alt="">
+                        <div>
+                            <img src="image/Introduction/museum_info_img01.gif" alt="">
+                            <img src="image/Introduction/museum_info_img02.gif" alt="">
+                        </div>
+                    </div>
+                    <p>
+                        은평구는 주민 생활수준의 점진적인 향상과 문화생활에 대한 수요가 증가하는 추세에 맞춰 우리구만의 정체성 확립과 문화콘텐츠를 확립하고자 박물관 건립을 검토하기 시작하였습니다.<br>
+                        우리구의 박물관 요소를 분석한 결과, 역사적으로는 교통·통신, 장묘문화와 전통 민속 등이 있었으며, 지리적으로는 은평한옥마을과의 연계성을 고려한 한옥 콘텐츠를 선정하였습니다.
+                        <br><br>
+                        은평역사한옥박물관은 은평의 역사가 담긴 지역 고유의 생활양식과 문화유산을 보존하여 구민과 학생들에게 지역문화에 대한 이해와 긍지를 심어주고, 은평구의 정체성을 살려 애향심을 갖게 하고자 건립 되었습니다.
+                        <br><br>
+                        은평역사한옥박물관의 주요시설인 상설전시실은 은평의 역사와 뉴타운발굴 유물이 전시된 은평역사실 (2층)과 실제 한옥과 한옥의 건축과정 및 한옥의 과학성, 자연 친화성 등이 전시된 한옥전시실(3층)로 이루어져 있습니다.<br>
+                        박물관 내부에는 기획전시실, 작은도서관, 체험학습실, 교육실, 희망장난감도서관 등의 부대시설이 있으며, 외부는 다양한 이동선을 따라 통일신라시대의 기와가마터를 비롯한 석물 전시장과 옥상정자인 용출정이 설치되어 있어 
+                        관람객들이 전시 관람과 휴식을 동시에 접할 수 있는 개방형 구조로 되어 있습니다.
+                    </p>
+                </article>
+
+                <article id="mus_article2">
+                    <h3>은평역사한옥박물관 MI</h3>
+                    <h5>시그니처 국문 MI</h5>
+                    <img src="image/Introduction/museum_mi01.gif">
+                    <div>
+                        <h4>-은평역사한옥박물관 MI 상세설명</h4>
+                        <p>은평을 대중적으로 상징할 수 있는 마패와 은평이 걸어온 길 그리고 유적의 형태를 상징적으로 적용한 디자인입니다. 
+                            이는 각각 은평을 이루고 이끌어나간 은평의 사람과, 삶의 터전이 되어온 북한산과 자연의 대지, 그리고 그들이 걸어오고 걸어나갈 은평의 문화와 비전를 상징합니다. 은평역사한옥박물관에 담고자 한 은평의 가치와 역사를 은유적인 절제미를 통해서 전달하고자 하였습니다.
+                            <br><br>
+                            원하시는 파일을 다운로드하실 수 있습니다.
+                        </p>
+                        <div>
+                            <button class="btn_mi_down" onclick="location.href = 'https://museum.ep.go.kr/ShareEtc/download.asp?Filepath=etc&FileName=EP_MI.jpg'">JPG 다운로드</button>
+                            <button class="btn_mi_down" onclick="location.href = 'https://museum.ep.go.kr/ShareEtc/download.asp?Filepath=etc&FileName=EP_MI.ai'">AI 다운로드</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer  id="foot">
+
+        </footer>
+    </div>
+</body>
+</html>

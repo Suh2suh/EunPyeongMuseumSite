@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=false">
+    <title>은평역사한옥박물관</title>
+
+    <link rel="stylesheet" href="./CSS/common.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+
+    <!-- JQuery 삽입 -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- 이미지 슬라이더 플러그인 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script type="text/javascript">   
+        $(document).ready( function() {
+        
+        $("header").load("./header.html");
+        $("footer").load("./footer.html");
+        
+        });
+    </script>
+    <script>
+            
+        var imagesPc = [
+            './image/main/main_visual_01.jpg',
+            './image/main/main_visual_02.jpg',
+            './image/main/main_visual_03.jpg',
+            './image/main/main_visual_04.jpg',
+        ];
+        var imagesPh = [
+            './image/main/main_visual_01_phone.jpg',
+            './image/main/main_visual_02_phone.jpg',
+            './image/main/main_visual_03_phone.jpg',
+            './image/main/main_visual_04_phone.jpg',
+        ];
+        
+        var i = 0;
+        
+        $(document).ready(function(){
+            var galleryImageB = $('.big_gallery').find('img').first();
+            var galleryImageS = $('.small_gallery').find('img').first();
+
+            setInterval(function() {
+                i = (i + 1) % imagesPc.length;
+
+                galleryImageB.fadeOut(400, function(){
+                    $(this).attr('src', imagesPc[i]);
+                    $(this).fadeIn(400);
+                })
+
+                galleryImageS.fadeOut(400, function(){
+                    $(this).attr('src', imagesPh[i]);
+                    $(this).fadeIn(400);
+                })
+
+            }, 6000);
+        })
+
+        function arrowL_click(){
+            var galleryImageB = $('.big_gallery').find('img').first();
+            var galleryImageS = $('.small_gallery').find('img').first();
+
+            if(i == 0)
+                i = 3
+            else
+                i -= 1
+
+            galleryImageB.fadeOut(400, function(){
+                $(this).attr('src', imagesPc[i]);
+                $(this).fadeIn(400);
+            })
+
+            galleryImageS.fadeOut(400, function(){
+                $(this).attr('src', imagesPh[i]);
+                $(this).fadeIn(400);
+            })
+        }
+        function arrowR_click(){
+            var galleryImageB = $('.big_gallery').find('img').first();
+            var galleryImageS = $('.small_gallery').find('img').first();
+
+            i = (i + 1) % imagesPc.length;
+
+            galleryImageB.fadeOut(400, function(){
+                $(this).attr('src', imagesPc[i]);
+                $(this).fadeIn(400);
+            })
+
+            galleryImageS.fadeOut(400, function(){
+                $(this).attr('src', imagesPh[i]);
+                $(this).fadeIn(400);
+            })
+        }
+
+        //미니 슬라이더 in main
+        $(document).ready(function(){
+         $('.mini_slider').bxSlider();
+        });
+
+        //아래로 슬라이드하면 보이는 footer (common)
+        $(window).scroll(function() {
+            if($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
+                document.getElementById("foot").style.display = "block";
+            }
+            else{
+                document.getElementById("foot").style.display = "none";
+            }
+        });
+
+    </script>
+
+    <style>
+
+    </style>
+
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+
+        </header>
+
+        <div id="main_page">
+            <section>
+                <nav class="image_slider">
+                    <div class="big_gallery">
+                        <img id="mainImage01" src="./image/main/main_visual_01.jpg">
+        
+                        <div>
+                            <button class="img_arrow" onclick="arrowL_click();"><img src="./image/img_arrow_L.png"></button>
+                            <button class="img_arrow" onclick="arrowR_click();"><img src="./image/img_arrow_R.png"></button>
+                        </div>
+                    </div>
+                    <div class="small_gallery">
+                        <img id="mainImage01" src="./image/main/main_visual_01_phone.jpg">
+        
+                        <div>
+                            <button class="img_arrow" onclick="arrowL_click();"><img src="./image/img_arrow_L.png"></button>
+                            <button class="img_arrow" onclick="arrowR_click();"><img src="./image/img_arrow_R.png"></button>
+                        </div>
+                    </div>
+                </nav>
+            </section>
+    
+    
+            <section id="main_contents">
+                <div id="top_contents">
+                    <article class="top_article">
+                        <div class="article_title"><img src="./image/main/content1_viewtime.png"><h2>관람시간</h2></div>
+                        <div class="article_middle">
+                            <h4>이용시간<span>09:00~18:00(입장 마감 17시)</span></h4>
+                            <h4>휴관일<span>매주 월요일</span></h4>
+                        </div><hr>
+                        <div  class="article_ps"><h6>· 1월 1일, 설날·추석 연휴, 월요일이 공휴일인 경우 화요일 휴관</h6></div>
+                    </article>
+        
+                    <article class="top_article">
+                        <div class="article_title"><img src="./image/main/content2_fee.png"><h2>관람료</h2></div>
+                        <div  class="article_middle">
+                            <h4>일반 <span>개인 : 1,000원 / 단체(20인이상) : 700원</span></h4>
+                            <h4>학생,군인<span>개인 : 500원 / 단체(20인이상) : 300원</span></h4>
+                        </div><hr>
+                        <div class="article_ps"><h6>· 미취학 아동, 경로우대 등 무료</h6></div>
+                    </article>
+        
+                    <article class="top_article">
+                        <div class="article_title">
+                            <a href="./sub_center.html"><h3>너나들이센터 <span>></span></h3></a>
+                        </div>
+                        <div class="article_title">
+                            <a href=""><h3>삼각산금암미술관 <span>></span></h3></a>
+                        </div>
+                        <div class="article_title">
+                            <a href=""><h3>셋이서문학관 <span>></span></h3></a>
+                        </div>
+                    </article>
+                </div>
+                <div id="bottom_contents">
+                    <article class="bottom_article">
+                        <div class="article_title"><h2>공지사항<a href="">더보기+</a></h2></div>
+                        <ul>
+                            <li><a href="">※※대형버스 방문시 사전 연락 부탁드립니다.</a></li>
+                            <li><a href="">코로나19 관련 박물관 임시휴관(21.12.10~12.12)</a></li>
+                            <li><a href="">은평역사한옥박물관 및 한문화체험시설 방역패스 의무</a></li>
+                            <li><a href="">셋이서문학관 임시 휴관 안내</a></li>
+                            <li><a href="">11월 18일(목) 2022 대학수학능력시험 당일 박물관</a></li>
+                            <li><a href="">한문화 너나들이센터 한복체험실 운영 재개 안내</a></li>
+                            <li><a href="">2022 대학수학능력시험 수험생 무료관람(11.19~12.31)</a></li>
+                        </ul>
+                    </article>
+        
+                    <article class="bottom_article">
+                        <div class="article_title"><h2>팝업존</h2></div>
+                        <div class="mini_slider">
+                            <div><img src="./image/main/pz01.gif"></div>
+                            <div><img src="./image/main/pz02.gif"></div>
+                        </div>
+                    </article>
+        
+                    <article class="bottom_article">
+                        <div class="article_title"><h2>온라인 영상<a href="">더보기+</a></h2></div>
+                        <nav id="main_video">
+                            <a href="https://youtu.be/MMeFVJriuws"><img src="./image/main/main_video.png"></a>
+                        </nav>
+                    </article>
+                </div>
+            </section>
+        </div>
+        
+        <footer id="foot">
+
+        </footer>
+    </div>
+</body>
+</html>
